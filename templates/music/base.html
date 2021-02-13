@@ -1,0 +1,162 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}Musico{% endblock title %}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'music/img/favicon.png' %}">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- CSS here -->
+  <link rel="stylesheet" href="{% static 'music/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/nice-select.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/audioplayer.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/gijgo.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/slicknav.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/rtl.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/search.css' %}">
+  <link rel="stylesheet" href="{% static 'music/css/pagination.css' %}">
+</head>
+
+<body>
+  <!-- header-start -->
+  <header>
+    <div class="header-area ">
+      <div id="sticky-header" class="main-header-area">
+        <div class="container-fluid">
+          <div class="header_bottom_border">
+            <div class="row align-items-center">
+              <div class="col-xl-3 col-lg-2">
+                <div class="logo">
+                  <a href="">
+                    <img src="{% static 'music/img/logo.png' %}" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-7">
+                <div class="main-menu  d-none d-lg-block">
+                  <nav>
+                    <ul id="navigation">
+                      <li>
+                        <div class="s129">
+                          <form action="." method="POST" id="search"> {% csrf_token %}
+                            <div class="inner-form">
+                              <div class="input-field">
+                                <button class="btn-search" type="submit" value="submit!">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                      d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                    </path>
+                                  </svg>
+                                </button>
+                                <input name="search" id="search" type="text" placeholder="search">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li><a href="{% url 'music:home' %}">home</a></li>
+                      <li><a href="{% url 'music:music-list' %}">tracks</a></li>
+                      <li><a href="{% url 'artist:artist_list' %}">Artists<i></i></a></li>
+                      <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                        <ul class="submenu">
+                          <li><a href="#">elements</a></li>
+                        </ul>
+                      </li>
+
+                      {% if  request.user.is_authenticated%}
+                      <li><a href="#">{{request.user}} <i class="ti-angle-down"></i></a>
+                        <ul class="submenu">
+                          <li><a href="#">Profile</a></li>
+                          <li><a href="#">Logout</a></li>
+                        </ul>
+                      </li> {% else %} <li><a href="#">Login</a>
+                      </li>
+                      {% endif %}
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                <div class="social_icon text-right">
+                  <ul>
+                    <li><a href="#"> <i class="fa fa-telegram"></i> </a></li>
+                    <li><a target="_blank" href="https://twitter.com/babak__khezry"> <i class="fa fa-twitter"></i> </a>
+                    </li>
+                    <li><a target="_blank" href="https://www.instagram.com/babak_khezry/"> <i
+                          class="fa fa-instagram"></i> </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header-end -->
+  {% block content %}
+
+  {% endblock content %}
+
+</body>
+<!-- JS here -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="{% static 'music/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{% static 'music/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'music/js/popper.min.js' %}"></script>
+<script src="{% static 'music/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'music/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'music/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'music/js/ajax-form.js' %}"></script>
+<script src="{% static 'music/js/waypoints.min.js' %}"></script>
+<script src="{% static 'music/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'music/js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'music/js/audioplayer.js' %}"></script>
+<script src="{% static 'music/js/scrollIt.js' %}"></script>
+<script src="{% static 'music/js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static 'music/js/wow.min.js' %}"></script>
+<script src="{% static 'music/js/nice-select.min.js' %}"></script>
+<script src="{% static 'music/js/jquery.slicknav.min.js' %}"></script>
+<script src="{% static 'music/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'music/js/plugins.js' %}"></script>
+<script src="{% static 'music/js/gijgo.min.js' %}"></script>
+<script src="{% static 'music/js/slick.min.js' %}"></script>
+<!--contact js-->
+<script src="{% static 'music/js/contact.js' %}"></script>
+<script src="{% static 'music/js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'music/js/jquery.form.js' %}"></script>
+<script src="{% static 'music/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'music/js/mail-script.js' %}"></script>
+
+<script src="{% static 'music/js/main.js' %}"></script>
+
+<script>
+  $(function () {
+    $('audio').audioPlayer({
+
+    });
+  });
+</script>
+<!-- style background -->
+
+
+</html>

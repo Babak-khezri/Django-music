@@ -1,0 +1,76 @@
+{% extends 'music/base.html' %}
+{% load static %}
+
+
+{% block title %} Tracks list {% endblock title %}
+{% block content %}
+<!-- music_area  -->
+<div class="music_area music_gallery">
+  <div class="container">
+
+    {% block header %}
+
+    {% endblock header %}
+
+    {% for music in musics %}
+    <div class="row align-items-center justify-content-center mb-20">
+      <div class="col-xl-10">
+        <div class="row align-items-center">
+          <div class="col-xl-9 col-md-9">
+            <div class="music_field">
+              <div class="thumb">
+                <img width="180" height="180" src="{{ music.image.url }}" alt="">
+              </div>
+              <div class="audio_name">
+                <div class="name">
+                  <h4>{{ music.name }}</h4>
+                  <h4 style="font-size: 22px;">artist :
+                    {% for artist in music.artist_list %}
+                    <a href="{% url 'artist:artist_music_list' artist.pk %}">{{ artist.name  }}</a>
+                    {% endfor %}
+                  </h4>
+                  <p>{{ music.upload_date|date:"d/ m/ Y" }}
+                </div>
+                <!-- <audio id="range" type="audio/mpeg" src="{{ music.file.url }}">
+                                </audio> -->
+                <audio controls>
+                  <source src="{{ music.file.url }}" type="audio/mpeg">
+                  Your browser does not support audio
+                </audio>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-3">
+            <div class="music_btn">
+              <a href="{{ music.file.url }}" class="boxed-btn">download <i class='fa fa-cloud-download'></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <head>
+    {% if pages.num_pages != 1 %}
+    <div class="pagination-wrapper">
+      <div class="pagination">
+        {% if musics.has_previous %}
+        <a class="prev page-numbers" href="{% url 'music:music-list' musics.previous_page_number %}">
+          <</a> {% endif %} {% for page in pages.page_range %} {% if page ==  current_page %} <span aria-current="page"
+            class="page-numbers current">{{page}}</span>
+            {% else %}
+            <a class="page-numbers" href="{% url 'music:music-list' page %}">{{page}}</a>
+            {% endif %}
+            {% endfor %}
+            {% if musics.has_next %}
+            <a class="next page-numbers" href="{% url 'music:music-list' musics.next_page_number %}">></a>
+            {% endif %}
+      </div>
+    </div>
+    {% endif %}
+</div>
+
+
+<!-- music_area end  -->
+{% endblock %}

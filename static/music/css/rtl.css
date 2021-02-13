@@ -1,0 +1,142 @@
+.section_title h3 {
+  color: #c4f3ff !important;
+  font-family: initial;
+}
+
+.music_gallery .music_field .audio_name .name h4 {
+  color: #7E6CFF;
+  font-family: Georgia;
+
+}
+
+.music_area .music_field .audio_name .name p {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: #808080;
+  ;
+  direction: rtl;
+}
+
+img {
+  border-radius: 60px;
+}
+
+.artist-header {
+  background: #fff;
+  border-radius: 90px;
+  border-start-start-radius: inherit;
+  border-end-end-radius: inherit;
+  border-block-width: 15px;
+  border-block-end-style: double;
+  border-block-start-style: double;
+  border-top-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  border-block-start-width: 15px;
+  border-block-end-width: 15px;
+}
+
+.artist-header h3 {
+  color: black !important;
+  font-size: 45px;
+  font-family: Georgia;
+  text-align: center;
+}
+
+.music_gallery .music_field .audio_name .name a:hover {
+  color: #00bdc6 !important;
+}
+
+.footer_widget {
+  text-align: center;
+}
+
+.s010 {
+  background: none;
+}
+
+.search-header {
+  border-block-width: 15px;
+  border-block-end-style: double;
+  border-block-start-style: double;
+  border-color: aliceblue;
+}
+
+.search-header h3 {
+  color: #c1ffff !important;
+  font-size: 45px;
+  font-family: Georgia;
+  text-align: center;
+
+}
+
+.youtube_video_area h3 {
+  text-align: center;
+  color: #00c4ff;
+  background: black;
+  border: double;
+  border-radius: 50px;
+  border-color: white;
+  font-family: cursive;
+}
+
+.youtube_video_area a:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+a.page-link:hover {
+  background: #303030;
+}
+
+a.page-link {
+  font-size: 25px !important;
+  color: #615cfd !important;
+}
+
+body {
+  background-image: url(../img/banner/banner1.png) !important;
+  background: round;
+  background-attachment: fixed;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+
+}
+
+.music_area.music_gallery {
+  padding-top: 70px;
+  background-image: url(../img/banner/banner7.jpg) !important;
+}
+
+
+.youtube_video_area {
+  padding-top: 70px;
+}
+
+.container {
+  padding: inherit;
+}
+
+nav.blog-pagination.justify-content-center.d-flex {
+  margin: auto;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.boxed-btn {
+  background: #615cfd59;
+  border: 1px solid #7e6cff;
+  color: #000000 !important;
+  cursor: pointer;
+  border-width: initial;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 19px;
+}
+
+a.boxed-btn:hover {
+  background: #00ff00a6;
+  border-color: white;
+  border-width: initial;
+}

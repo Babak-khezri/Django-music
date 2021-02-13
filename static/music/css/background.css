@@ -1,0 +1,17 @@
+body {
+    background-image: url(../img/banner/banner1.png) !important;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 120px;
+    width: auto;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(2px 4px 6px black);
+    font-family: -webkit-pictograph;
+    font-weight: bold;
+}

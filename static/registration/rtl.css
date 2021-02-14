@@ -1,0 +1,111 @@
+form.artist-form {
+    direction: rtl;
+    padding-left: 150px;
+    padding-right: 150px;
+    border: ridge;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-color: rgb(255, 255, 255);
+    border-block-end: inherit;
+    border-block-start: inherit;
+    border-width: 5px;
+}
+
+form.music-form {
+    direction: rtl;
+    padding-left: 150px;
+    padding-right: 150px;
+    border: ridge;
+    border-bottom-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-color: rgb(255, 255, 255);
+    border-block-end: inherit;
+    border-block-start: inherit;
+    border-width: 5px;
+}
+
+label {
+    display: table-cell;
+    font-size: large;
+    font-style: oblique;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input#id_image {
+    border: inset;
+    color: #00dcff;
+}
+
+select#id_artist {
+    height: 230px;
+    font-size: 20px;
+    font-family: none;
+    font-weight: bold;
+}
+
+button.btn.btn-success {
+    margin: auto;
+    display: block;
+    height: 65px;
+    width: 310px;
+    font-size: xx-large;
+    font-family: ui-sans-serif;
+    font-style: oblique;
+    border: solid;
+}
+
+.form-control {
+    border-width: 2px;
+    border-color: #28a745;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+html.js.sizes.customelements.history.pointerevents.postmessage.webgl.websockets.cssanimations.csscolumns.csscolumns-width.csscolumns-span.csscolumns-fill.csscolumns-gap.csscolumns-rule.csscolumns-rulecolor.csscolumns-rulestyle.csscolumns-rulewidth.csscolumns-breakbefore.csscolumns-breakafter.csscolumns-breakinside.flexbox.picture.srcset.webworkers {
+    padding-top: 145px;
+}
+
+img.img-fluid {
+    border-radius: 10px;
+}
+
+img.img-fluid {
+    height: 400px;
+}
+
+.col-md-12 {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.card-header {
+    background: linear-gradient(20deg, black 30%, #860000);
+    text-align: right;
+    display: grid;
+    border-bottom: ridge;
+    border-width: 4px;
+
+}
+
+h3.card-title.mb-0.float-left {
+    font-size: 35px;
+    font-family: system-ui;
+    font-style: oblique;
+    color: white;
+}
+
+.card-body {
+    background: linear-gradient(925deg, black 40%, #860000);
+}
+
+.card.card-primary {
+    border-width: 4px;
+}

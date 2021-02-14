@@ -7,12 +7,18 @@
 <!-- music_area  -->
 <div class="music_area music_gallery">
   <div class="container">
-
+    <style>
+      body {
+        background-image: url(/static/music/img/banner/banner7.jpg) !important;
+        background-size: auto !important;
+      }
+    </style>
     {% block header %}
 
     {% endblock header %}
 
     {% for music in musics %}
+
     <div class="row align-items-center justify-content-center mb-20">
       <div class="col-xl-10">
         <div class="row align-items-center">
@@ -31,8 +37,6 @@
                   </h4>
                   <p>{{ music.upload_date|date:"d/ m/ Y" }}
                 </div>
-                <!-- <audio id="range" type="audio/mpeg" src="{{ music.file.url }}">
-                                </audio> -->
                 <audio controls>
                   <source src="{{ music.file.url }}" type="audio/mpeg">
                   Your browser does not support audio
@@ -56,15 +60,15 @@
     <div class="pagination-wrapper">
       <div class="pagination">
         {% if musics.has_previous %}
-        <a class="prev page-numbers" href="{% url 'music:music-list' musics.previous_page_number %}">
+        <a class="prev page-numbers" href="{% url 'music:music_list' musics.previous_page_number %}">
           <</a> {% endif %} {% for page in pages.page_range %} {% if page ==  current_page %} <span aria-current="page"
             class="page-numbers current">{{page}}</span>
             {% else %}
-            <a class="page-numbers" href="{% url 'music:music-list' page %}">{{page}}</a>
+            <a class="page-numbers" href="{% url 'music:music_list' page %}">{{page}}</a>
             {% endif %}
             {% endfor %}
             {% if musics.has_next %}
-            <a class="next page-numbers" href="{% url 'music:music-list' musics.next_page_number %}">></a>
+            <a class="next page-numbers" href="{% url 'music:music_list' musics.next_page_number %}">></a>
             {% endif %}
       </div>
     </div>

@@ -1,0 +1,44 @@
+{% extends 'music/base.html' %}
+{% load static %}
+{% block content %}
+
+<
+
+<div class="image-center">
+    <div class="row">
+        <div class="col-6">
+            <div class="" data-aos="fade-up" data-aos-delay="100">
+                <div class="event">
+                    <a href="#">
+                        <img height="200" width="600" src="{% static 'registration/logged/images/img_1.jpg' %}"
+                            alt="Image" class="img-fluid">
+                        <div class="date">
+                            <span>
+                                <span><i class="fa fa-plus-square"></i> Add new music</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="" data-aos="fade-up" data-aos-delay="100">
+                <div class="event">
+                    <a href="#">
+                        <img height="200" width="600" src="{% static 'registration/logged/images/img_2.jpg' %}"
+                            alt="Image" class="img-fluid center">
+                        <div class="date">
+                            <span>
+                                <span><i class="fa fa-plus-square"></i> Add new artist</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

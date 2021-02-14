@@ -140,3 +140,7 @@ a.boxed-btn:hover {
   border-color: white;
   border-width: initial;
 }
+
+body {
+  background-image: url(../img/banner/banner1.png) !important;
+}

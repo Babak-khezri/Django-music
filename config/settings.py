@@ -10,13 +10,16 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'uan4bt_p4c6=2+pi0&fmfz9jwklh8i95s25l5h1pacg$ihr&56'
-
+LOGIN_REDIRECT_URL = "account:home"
+LOGIN_URL = "account:login"
+LOGOUT_REDIRECT_URL = "account:login"
+AUTH_USER_MODEL = 'account.User' 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'account.User'
+
 
 # Application definition
 
@@ -30,6 +33,7 @@ INSTALLED_APPS = [
     'music.apps.MusicConfig',
     'artist.apps.ArtistConfig',
     'account.apps.AccountConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,107 @@
+{% extends 'music/base.html' %}
+{% block title %} SIGN UP PAGE {% endblock title %}
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+<head>
+  <title>Login Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="{% static 'registration/login/images/icons/favicon.ico"' %}/>
+	<!--===============================================================================================-->
+	<link rel=" stylesheet" type="text/css"
+    href="{% static 'registration/login/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css"
+    href="{% static 'registration/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css"
+    href="{% static 'registration/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'registration/login/vendor/animate/animate.css' %}">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css"
+    href="{% static 'registration/login/vendor/css-hamburgers/hamburgers.min.css' %}">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'registration/login/vendor/select2/select2.min.css' %}">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'registration/login/css/util.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'registration/login/css/main.css' %}">
+  <!--===============================================================================================-->
+</head>
+
+<body>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100 p-t-190 p-b-30">
+        <form class="login100-form validate-form" method="POST">{% csrf_token %}
+          <div class="login100-form-avatar">
+            <img src="{% static '/music/img/banner/banner1.png' %}" alt="AVATAR" class="avatar">
+          </div>
+
+
+
+          <span class="login100-form-title p-t-20 p-b-45">
+          </span>
+          <div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
+            {{form.username|add_class:"input100"|attr:"placeholder:username"}}
+
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-10" data-validate="email is required">
+            {{form.email|add_class:"input100"|attr:"placeholder:email"}}
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-10" data-validate="password is required">
+            {{form.password1|add_class:"input100"|attr:"placeholder:Password"}}
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-10" data-validate="confirm password is required">
+            {{form.password2|add_class:"input100"|attr:"placeholder:confirm password"}}
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-unlock-alt"></i>
+            </span>
+          </div>
+
+          <div class="container-login100-form-btn p-t-10">
+            <button class="login100-form-btn myfont">
+              Sing up
+            </button>
+          </div>
+          <div class="text-center w-full p-t-25 p-b-230">
+            <a href="{% url 'account:login'%}" class="txt1">
+              login
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--===============================================================================================-->
+  <script src="{% static 'registration/login/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+  <!--===============================================================================================-->
+  <script src="{% static 'registration/login/vendor/bootstrap/js/popper.js' %}"></script>
+  <script src="{% static 'registration/login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <!--===============================================================================================-->
+  <script src="{% static 'registration/login/vendor/select2/select2.min.js' %}"></script>
+  <!--===============================================================================================-->
+  <script src="{% static 'registration/login/js/main.js' %}"></script>
+
+</body>
+{% endblock content %}

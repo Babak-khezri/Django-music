@@ -1,0 +1,36 @@
+.profile {
+    text-align: center;
+    padding-top: 120px;
+}
+
+.center-profile {
+    background: white;
+    display: inline-table;
+    border: dotted;
+    padding: 50px 40px;
+    border-width: thick;
+    border-radius: 30px;
+    padding-top: 30px;
+}
+
+.center-profile h1,
+h2 {
+    font-family: cursive;
+    text-align: left;
+}
+
+.center-profile img {
+    border: solid;
+    border-color: aquamarine;
+    border-width: inherit;
+}
+
+.profile-info {
+    padding-top: 30px;
+    border-bottom: dotted;
+    border-left: dotted;
+    border-top-left-radius: inherit;
+    padding: 15px 20px;
+    -webkit-text-emphasis: sesame;
+    -webkit-text-emphasis-position: under;
+}

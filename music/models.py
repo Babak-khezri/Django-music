@@ -18,7 +18,7 @@ class Music(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True,verbose_name='کاربر')
     artist = models.ManyToManyField(Artist,verbose_name='خواننده')
     file = models.FileField(upload_to='music/tracks',validators=[validate_file_extension],verbose_name='فایل آهنگ')
-    image = models.ImageField(upload_to='images/covers',verbose_name='کاور')
+    image = models.ImageField(upload_to='images/covers',default='images/covers/default.jpg',verbose_name='کاور')
     upload_date = models.DateTimeField(auto_now_add=True,verbose_name='تاریخ اضافه کردن')
 
     class Meta:
